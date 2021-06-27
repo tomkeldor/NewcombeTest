@@ -12,7 +12,7 @@ Na zapisane wyniki testu składa się:
 
 ## Wymagania
 
-* A subscription key for the Speech service. See [Wypróbuj bezpłatnie](https://docs.microsoft.com/azure/cognitive-services/speech-service/get-started).
+* Klucz subskrypcji Speech service. [Wypróbuj bezpłatnie](https://docs.microsoft.com/azure/cognitive-services/speech-service/get-started).
 * Komputer PC lub Mac, z działającym mikrofonem.
 * Edytor tekstu.
 * Opcjonalnie, serwer obsługujący hosting skryptów PHP.
