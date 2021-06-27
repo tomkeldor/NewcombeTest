@@ -1,40 +1,43 @@
-# JavaScript Speech Recognition, Synthesis, and Translation Sample for the Web Browser
+# Test płynności Newcombe z użyciem wykrywania mowy w JavaScript dla przeglądarki internetowej
 
-This sample demonstrates how to recognize, synthesize, and translate speech with the Speech SDK for JavaScript on a web browser, like Microsoft Edge, or Chrome.
-See [this article](https://docs.microsoft.com/azure/cognitive-services/speech-service/quickstart-js-browser) for introductory information on the Speech SDK for JavaScript.
+Ta aplikacja pozwala przeprowadzić test płynności Newcombe używając mikrofonu badanej osoby. 
+Test polega na na wymienianiu nazw zwierząt, roślin, ptaków w czasie 30 sekund.
+Osoby z deficytami poznawczymi wypowiadają mniejszą liczbę słów [zobacz źródło](https://journals.viamedica.pl/psychiatria/article/view/40894/32069).
+Na zapisane wyniki testu składa się:
+* Identyfikator sesji
+* Liczba słów referencyjnych
+* Liczba słów rozpoznanych
+* Liczba dopasowanych słów
+* Wynik procentowy dopasowania
 
-## Prerequisites
+## Wymagania
 
-* A subscription key for the Speech service. See [Try the speech service for free](https://docs.microsoft.com/azure/cognitive-services/speech-service/get-started).
-* For intent recognition: an *endpoint* subscription key for the [Language Understanding Intelligent Service (LUIS)](https://www.luis.ai/home), and an application ID.
-* A PC or Mac, with a working microphone.
-* A text editor.
-* Optionally, a web server that supports hosting PHP scripts.
+* A subscription key for the Speech service. See [Wypróbuj bezpłatnie](https://docs.microsoft.com/azure/cognitive-services/speech-service/get-started).
+* Komputer PC lub Mac, z działającym mikrofonem.
+* Edytor tekstu.
+* Opcjonalnie, serwer obsługujący hosting skryptów PHP.
 
-## Build the sample
+## Budowa
 
-* **By downloading the Microsoft Cognitive Services Speech SDK when building this sample, you acknowledge its license, see [Speech SDK license agreement](https://docs.microsoft.com/azure/cognitive-services/speech-service/license).**
-* [Download the sample code to your development PC.](/README.md#get-the-samples)
+* **Pobierając Microsoft Cognitive Services Speech SDK przy budowie tej aplikacji, akceptujesz [warunki licencji Speech SDK](https://docs.microsoft.com/azure/cognitive-services/speech-service/license).**
 
-If you want to host the sample on a web server, the web server must support PHP with curl enabled. Follow these steps:
+Jeśli chcesz hostować aplikację na serwerze, musi on wspierać PHP z obsługą curl. Wykonaj poniższe kroki:
 
-* Edit the `token.php` source:
-  * Replace the string `YourServiceRegion` with the service region of your subscription.
-    For example, replace with `westus` if you are using the 30-day free trial subscription.
-  * Replace the string `YourSubscriptionKey` with your own subscription key.
-* Edit the `index.html` source:
-  * Replace the value for the variable `authorizationEndpoint` with the full URL where you can access the token.php resource.
-* For synthesis, edit the `synthesis.html` source:
-  * Replace the value for the variable `authorizationEndpoint` with the full URL where you can access the token.php resource.
-* Deploy all files to your web server.
+* Edytuj plik `token.php`:
+  * Zastąp ciąg `YourServiceRegion` regionem usługi swojej subskrypcji.
+    Np. zastąp `northeurope` jeśli korzystasz z 30 dniowej próbnej subskrypcji.
+  * Zastąp ciąg `YourSubscriptionKey` swoim własnym kluczem subskrypcji.
+* Edytuj `index.html` plik:
+  * Zastąp wartość zmiennej `authorizationEndpoint` pełnym adresem URL gdzie możesz uzyskać dostęp do zasobu token.php.
+* Umieść wszystkie pliki na swoim serwerze.
 
-## Run the sample
+## Uruchomienie
 
-* In case you are running the sample from your local computer, open `index.html` or `synthesis.html` from the location where you have downloaded this sample with a JavaScript capable browser.
-  Use the input fields to set your subscription key and service region.
-* In case you are hosting the sample on a web server, open a web browser and navigate to the full URL where you host the sample.
+* Jeśli uruchamiasz aplikację na swoim lokalnym komputerze, otwórz `index.html` z lokalizacji, do której zapisałeś aplikację używając przeglądarki z obsługą Javascript.
+  Wpisz do pierwszego pola `Subscription` wartość swojego klucza subskrypcji, rejon usługi jest już predefiniowany.
+* W przypadku hostowania aplikacji na serwerze, otwórz przeglądarkę i przejdź do pełnego adresu URL miejsca gdzie hostujesz aplikację.
 
-## References
+## Referencje
 
 * [JavaScript quickstart article on the SDK documentation site](https://docs.microsoft.com/azure/cognitive-services/speech-service/quickstart-js-browser)
 * [Speech SDK API reference for JavaScript](https://aka.ms/csspeech/javascriptref)

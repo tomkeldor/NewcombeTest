@@ -440,10 +440,10 @@
                 regionOptions,
                 languageOptions,
                 inputSourceMicrophoneRadio,
-                inputSourceFileRadio,
+                //inputSourceFileRadio,
                 scenarioSelection,
                 formatSimpleRadio,
-                formatDetailedRadio,
+                //formatDetailedRadio,
                 appId,
                 //phrases,
                 languageTargetOptions
@@ -455,7 +455,7 @@
                         case 'speechRecognizerRecognizeOnce':
                         case 'intentRecognizerRecognizeOnce':
                         case 'pronunciationAssessmentOnce': return 'recognizeOnceAsync()';
-                        case 'speechRecognizerContinuous':
+                        case 'speechRecognizerContinuous': return 'click here to start your test then quickly click allow button above for microphone access';
                         case 'pronunciationAssessmentContinuous': return 'startContinuousRecognitionAsync()';
                         case 'translationRecognizerContinuous': return 'startContinuousTranslation()';
                     }
