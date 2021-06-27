@@ -15,9 +15,11 @@
     <div id="content" style="display:none">
         <table>
             <tr>
-                <td></td>
+                <td align="right"><img alt="PJATK" width="130px" src="./logo.png"></td>
                 <td>
-                    <h2 style="font-weight:500;">Newcombe test app</h2>
+                    <h2 style="font-weight:500;">Test płynności Newcombe</h2>
+                    <h3 style="font-weight: 400;">Polega on na wymienianiu nazw zwierząt, roślin, ptaków w czasie 30 sekund.</h3>
+                    <h3 style="font-weight: 400;">Osoby z deficytami poznawczymi wypowiadają mniejszą liczbę słów (<a href="https://journals.viamedica.pl/psychiatria/article/view/40894/32069">źródło</a>).</h3>
                 </td>
             </tr>
             <tr>
@@ -29,14 +31,14 @@
                 <td align="right">Region:</td>
                 <td align="left">
                     <select id="regionOptions">
-                        <option value="westus">West US</option>
-                        <option value="westus2">West US 2</option>
-                        <option value="eastus">East US</option>
-                        <option value="eastus2">East US 2</option>
-                        <option value="eastasia">East Asia</option>
-                        <option value="southeastasia">South East Asia</option>
+                        <option value="westus" disabled>West US</option>
+                        <option value="westus2" disabled>West US 2</option>
+                        <option value="eastus" disabled>East US</option>
+                        <option value="eastus2" disabled>East US 2</option>
+                        <option value="eastasia" disabled>East Asia</option>
+                        <option value="southeastasia" disabled>South East Asia</option>
                         <option value="northeurope" selected="selected">North Europe</option>
-                        <option value="westeurope">West Europe</option>
+                        <option value="westeurope" disabled>West Europe</option>
                     </select>
                 </td>
             </tr>
@@ -46,53 +48,46 @@
                     <!-- For the full list of supported languages see:
                         https://docs.microsoft.com/azure/cognitive-services/speech-service/supported-languages -->
                     <select id="languageOptions">
-                        <option value="ar-EG">Arabic - EG</option>
-                        <option value="ca-ES">Catalan - ES</option>
-                        <option value="zh-CN">Chinese - CN</option>
-                        <option value="zh-HK">Chinese - HK</option>
-                        <option value="zh-TW">Chinese - TW</option>
-                        <option value="da-DK">Danish - DK</option>
-                        <option value="da-DK">Danish - DK</option>
-                        <option value="nl-NL">Dutch - NL</option>
-                        <option value="en-AU">English - AU</option>
-                        <option value="en-CA">English - CA</option>
-                        <option value="en-GB">English - GB</option>
-                        <option value="en-IN">English - IN</option>
-                        <option value="en-NZ">English - NZ</option>
-                        <option value="en-US">English - US</option>
-                        <option value="de-DE">German - DE</option>
-                        <option value="es-ES">Spanish - ES</option>
-                        <option value="es-MX">Spanish - MX</option>
-                        <option value="fi-FI">Finnish - FI</option>
-                        <option value="fr-CA">French - CA</option>
-                        <option value="fr-FR">French - FR</option>
-                        <option value="hi-IN">Hindi - IN</option>
-                        <option value="it-IT">Italian - IT</option>
-                        <option value="ja-JP">Japanese - JP</option>
-                        <option value="ko-KR">Korean - KR</option>
-                        <option value="nb-NO">Norwegian - NO</option>
+                        <option value="ar-EG" disabled>Arabic - EG</option>
+                        <option value="ca-ES" disabled>Catalan - ES</option>
+                        <option value="zh-CN" disabled>Chinese - CN</option>
+                        <option value="zh-HK" disabled>Chinese - HK</option>
+                        <option value="zh-TW" disabled>Chinese - TW</option>
+                        <option value="da-DK" disabled>Danish - DK</option>
+                        <option value="da-DK" disabled>Danish - DK</option>
+                        <option value="nl-NL" disabled>Dutch - NL</option>
+                        <option value="en-AU" disabled>English - AU</option>
+                        <option value="en-CA" disabled>English - CA</option>
+                        <option value="en-GB" disabled>English - GB</option>
+                        <option value="en-IN" disabled>English - IN</option>
+                        <option value="en-NZ" disabled>English - NZ</option>
+                        <option value="en-US" disabled>English - US</option>
+                        <option value="de-DE" disabled>German - DE</option>
+                        <option value="es-ES" disabled>Spanish - ES</option>
+                        <option value="es-MX" disabled>Spanish - MX</option>
+                        <option value="fi-FI" disabled>Finnish - FI</option>
+                        <option value="fr-CA" disabled>French - CA</option>
+                        <option value="fr-FR" disabled>French - FR</option>
+                        <option value="hi-IN" disabled>Hindi - IN</option>
+                        <option value="it-IT" disabled>Italian - IT</option>
+                        <option value="ja-JP" disabled>Japanese - JP</option>
+                        <option value="ko-KR" disabled>Korean - KR</option>
+                        <option value="nb-NO" disabled>Norwegian - NO</option>
                         <option value="pl-PL" selected="selected">Polish - PL</option>
-                        <option value="pt-BR">Portuguese - BR</option>
-                        <option value="pt-PT">Portuguese - PT</option>
-                        <option value="ru-RU">Russian - RU</option>
-                        <option value="sv-SE">Swedish - SE</option>
+                        <option value="pt-BR" disabled>Portuguese - BR</option>
+                        <option value="pt-PT" disabled>Portuguese - PT</option>
+                        <option value="ru-RU" disabled>Russian - RU</option>
+                        <option value="sv-SE" disabled>Swedish - SE</option>
                     </select>
                 </td>
             </tr>
             <tr>
                 <td align="right">Audio Input:</td>
                 <td align="left">
-                    <input type="radio"
-                        name="inputSourceOption"
-                        checked="checked"
-                        id="inputSourceMicrophoneRadio"
-                        value="Microphone"/>
-                    <select id="microphoneSources" disabled="true"/>
-                    <input type="radio"
-                        name="inputSourceOption"
-                        id="inputSourceFileRadio"
-                        value="File"
-                        disabled/>
+                    <input type="radio" name="inputSourceOption" checked="checked" id="inputSourceMicrophoneRadio"
+                        value="Microphone" />
+                    <select id="microphoneSources" disabled="true" />
+                    <input type="radio" name="inputSourceOption" id="inputSourceFileRadio" value="File" disabled />
                     <label id="inputSourceFileLabel" for="inputSourceFileRadio">Audio file</label>
                     <button id="inputSourceChooseFileButton" disabled="true">...</button>
                     <input type="file" id="filePicker" accept=".wav" style="display:none" />
@@ -102,29 +97,24 @@
                 <td align="right">Scenario:</td>
                 <td align="left">
                     <select id="scenarioSelection">
-                        <option value="speechRecognizerRecognizeOnce">Single-shot speech-to-text</option>
-                        <option value="speechRecognizerContinuous" selected="selected">Continuous speech-to-text</option>
-                        <option value="intentRecognizerRecognizeOnce">Single-shot intent recognition</option>
-                        <option value="translationRecognizerContinuous">Continuous translation</option>
-                        <option value="pronunciationAssessmentOnce">Single-shot pronunciation assessment</option>
-                        <option value="pronunciationAssessmentContinuous">Continuous pronunciation assessment</option>
+                        <option value="speechRecognizerRecognizeOnce" disabled>Single-shot speech-to-text</option>
+                        <option value="speechRecognizerContinuous" selected="selected">Continuous speech-to-text
+                        </option>
+                        <option value="intentRecognizerRecognizeOnce" disabled>Single-shot intent recognition</option>
+                        <option value="translationRecognizerContinuous" disabled>Continuous translation</option>
+                        <option value="pronunciationAssessmentOnce" disabled>Single-shot pronunciation assessment
+                        </option>
+                        <option value="pronunciationAssessmentContinuous" disabled>Continuous pronunciation assessment
+                        </option>
                     </select>
                 </td>
             </tr>
             <tr id="formatOptionRow">
                 <td align="right">Result Format:</td>
                 <td align="left">
-                    <input type="radio"
-                        name="formatOption"
-                        checked="checked"
-                        id ="formatSimpleRadio"
-                        value="Simple"/>
+                    <input type="radio" name="formatOption" checked="checked" id="formatSimpleRadio" value="Simple" />
                     <label for="formatSimpleRadio">Simple</label>
-                    <input type="radio"
-                        name="formatOption"
-                        id ="formatDetailedRadio"
-                        value="Detailed"
-                        disabled/>
+                    <input type="radio" name="formatOption" id="formatDetailedRadio" value="Detailed" disabled />
                     <label for="formatDetailedRadio">Detailed</label>
                 </td>
             </tr>
@@ -197,10 +187,11 @@
             <tr id="languageUnderstandingAppIdRow">
                 <td align="right">Application ID:</td>
                 <td>
-                    <input id="appId" type="text" size="60" placeholder="required: appId for the Language Understanding service"/>
+                    <input id="appId" type="text" size="60"
+                        placeholder="required: appId for the Language Understanding service" />
                 </td>
             </tr>
-            <tr>
+            <!-- <tr>
                 <td align="right">
                     <a href="https://docs.microsoft.com/azure/cognitive-services/speech-service/get-started-speech-to-text#improve-recognition-accuracy">
                         Phrase List Values:
@@ -213,8 +204,8 @@
                         value=""
                         placeholder="optional: semicolon-delimited list;of;words">
                 </td>
-            </tr>
-            <tr id="pronunciationAssessmentReferenceTextRow">
+            </tr> -->
+            <!-- <tr id="pronunciationAssessmentReferenceTextRow">
                 <td align="right">
                     Reference Text:
                 </td>
@@ -225,12 +216,17 @@
                         value=""
                         placeholder="pronunciation assessment reference text.">
                 </td>
-            </tr>
+            </tr> -->
             <tr>
                 <td align="right"><b></b></td>
                 <td>
                     <button id="scenarioStartButton">Start</button>
                     <button id="scenarioStopButton" disabled="disabled" style="display: none;">Stop</button>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    Remaining time:
                 </td>
                 <td><span id="timer"></span></td>
             </tr>
@@ -240,14 +236,14 @@
                     <textarea id="phraseDiv" style="display: inline-block;width:500px;height:200px"></textarea>
                 </td>
             </tr>
-            <tr>
+            <!-- <tr>
                 <td align="right">Events:</td>
                 <td align="left">
                     <textarea id="statusDiv"
                         style="display: inline-block;width:500px;height:200px;overflow: scroll;white-space: nowrap;">
                     </textarea>
                 </td>
-            </tr>
+            </tr> -->
         </table>
     </div>
 
@@ -298,7 +294,7 @@
     <script>
         var SpeechSDK;
         var phraseDiv, statusDiv;
-        var key, authorizationToken, appId, phrases;
+        var key, authorizationToken, appId;//, phrases;
         var regionOptions;
         var languageOptions, formatOption, filePicker, microphoneSources;
         var useDetailedResults;
@@ -311,6 +307,7 @@
         var audioFile;
         var microphoneId;
         var referenceText;
+        var recognizedText;
         var pronunciationAssessmentResults;
 
         var thingsToDisableDuringSession;
@@ -335,65 +332,65 @@
             this.granularity = granularity || 1000;
             this.tickFtns = [];
             this.running = false;
-          }
-          
-          CountDownTimer.prototype.start = function() {
+        }
+
+        CountDownTimer.prototype.start = function () {
             if (this.running) {
-              return;
+                return;
             }
             scenarioStartButton.disabled = true;
             this.running = true;
             var start = Date.now(),
                 that = this,
                 diff, obj;
-          
+
             (function timer() {
-              diff = that.duration - (((Date.now() - start) / 1000) | 0);
-          
-              if (diff > 0) {
-                setTimeout(timer, that.granularity);
-              } else {
-                diff = 0;
-                reco.stopContinuousRecognitionAsync(
-                            function () {
-                                reco.close();
-                                reco = undefined;
-                            },
-                            function (err) {
-                                reco.close();
-                                reco = undefined;
-                            }
-                        );
-                that.running = false;
-              }
-          
-              obj = CountDownTimer.parse(diff);
-              that.tickFtns.forEach(function(ftn) {
-                ftn.call(this, obj.minutes, obj.seconds);
-              }, that);
+                diff = that.duration - (((Date.now() - start) / 1000) | 0);
+
+                if (diff > 0) {
+                    setTimeout(timer, that.granularity);
+                } else {
+                    diff = 0;
+                    reco.stopContinuousRecognitionAsync(
+                        function () {
+                            reco.close();
+                            reco = undefined;
+                        },
+                        function (err) {
+                            reco.close();
+                            reco = undefined;
+                        }
+                    );
+                    that.running = false;
+                }
+
+                obj = CountDownTimer.parse(diff);
+                that.tickFtns.forEach(function (ftn) {
+                    ftn.call(this, obj.minutes, obj.seconds);
+                }, that);
             }());
-          };
-          
-          CountDownTimer.prototype.onTick = function(ftn) {
+        };
+
+        CountDownTimer.prototype.onTick = function (ftn) {
             if (typeof ftn === 'function') {
-              this.tickFtns.push(ftn);
+                this.tickFtns.push(ftn);
             }
             return this;
-          };
-          
-          CountDownTimer.prototype.expired = function() {
+        };
+
+        CountDownTimer.prototype.expired = function () {
             scenarioStopButton.click();
             return !this.running;
-          };
-          
-          CountDownTimer.parse = function(seconds) {
-            return {
-              'minutes': (seconds / 60) | 0,
-              'seconds': (seconds % 60) | 0
-            };
-          };
+        };
 
-          function format(minutes, seconds) {
+        CountDownTimer.parse = function (seconds) {
+            return {
+                'minutes': (seconds / 60) | 0,
+                'seconds': (seconds % 60) | 0
+            };
+        };
+
+        function format(minutes, seconds) {
             minutes = minutes < 10 ? "0" + minutes : minutes;
             seconds = seconds < 10 ? "0" + seconds : seconds;
             display.textContent = minutes + ':' + seconds;
@@ -401,9 +398,10 @@
 
         function resetUiForScenarioStart() {
             phraseDiv.innerHTML = "";
-            statusDiv.innerHTML = "";
+            //statusDiv.innerHTML = "";
             useDetailedResults = document.querySelector('input[name="formatOption"]:checked').value === "Detailed";
             pronunciationAssessmentResults = [];
+            recognizedText = "";
         }
 
         document.addEventListener("DOMContentLoaded", function () {
@@ -415,7 +413,7 @@
             statusDiv = document.getElementById("statusDiv");
             key = document.getElementById("key");
             appId = document.getElementById("appId");
-            phrases = document.getElementById("phrases");
+            //phrases = document.getElementById("phrases");
             languageOptions = document.getElementById("languageOptions");
             languageTargetOptions = document.getElementById("languageTargetOptions");
             voiceOutput = document.getElementById("voiceOutput");
@@ -426,13 +424,15 @@
             inputSourceMicrophoneRadio = document.getElementById('inputSourceMicrophoneRadio');
             formatSimpleRadio = document.getElementById('formatSimpleRadio');
             formatDetailedRadio = document.getElementById('formatDetailedRadio');
-            referenceText = document.getElementById('referenceText');
+            //referenceText = document.getElementById('referenceText');
+
+            referenceText = "Amur Anakonda Aligator Alpaka Bóbr Byk Biedronka Bocian Bąk Bażant Boa Bizon Baran Czapla Chrząszcz Chomik Czajka Czyż Dorsz Daniel Delfin Dzik Dziobak Dingo Dikdik Diabeł Dodo Emu Eland Edredon Ekskulapa Fenek Flądra Flaming Foka Fretka Gołąb Guziec Gepard Goryl Grizly Gęś Gil Gronostaj Hiena Hipopotam Homar Halibut Iguana Indyk Ibis Irbis Impala Jaguar Jeleń Jastrząb Jeż Jak Jaskółka Jedwabnik Jeżozwierz Jesiotr Jednot Jaszczurka Koala Krowa Koń Kura Kapibara Kaczka Kanczyl Kangur Królik Kruk Kalmar Kajman Karaluch Koza Karaś Kormoran Koczkodan Kondor Kaszalot Kret Kot Leszcz Likaon Lama Legwan Leming Leniwiec Lew Lis Leopard Łabędź Łania Łasica Łęczak Łoś Łosoś Mrówkojad Małpa Mysz Manta Mors Morświn Murena Motyl Małż Mol Makrela Nietoperz Nosorożec Nartnik Narwal Niedźwiedź Norka Nornica Nosacz Orangutan Okapi Okoń Ocelot Orka Orzeł Ostryga Osa Osioł Ośmiornica Owca Pająk Panda Pantera Papuga Pawian Pelikan Pies Pingwin Puma Pyton Rak Rekin Renifer Ropucha Rosomak Rozgwiazda Rybik Ryś Surykatka Struś Szczur Sęp Sikorka Sarna Sowa Salamandra Szympans Słoń Sokół Szczupak Traszka Tygrys Tarantula Truteń Tapir Trzmiel Uszatka Uchatka Ukleja Wombat Wieloryb Wilk Wielbłąd Wąż Wieprz Wół Ważka Wiewiórka Waran Wrona Zebra Zając Zaskroniec Zięba Zimorodek Żyrafa Żuk Żółw Żuraw Żmija Żubroń Żbik Żubr";
 
             display = document.querySelector('#timer');
-            timer = new CountDownTimer(10),
-            timeObj = CountDownTimer.parse(10);
+            timer = new CountDownTimer(30),
+                timeObj = CountDownTimer.parse(30);
             format(timeObj.minutes, timeObj.seconds);
-    
+
             timer.onTick(format);
 
             thingsToDisableDuringSession = [
@@ -445,17 +445,17 @@
                 formatSimpleRadio,
                 formatDetailedRadio,
                 appId,
-                phrases,
+                //phrases,
                 languageTargetOptions
             ];
 
             function setScenario() {
-                var startButtonText = (function() {
+                var startButtonText = (function () {
                     switch (scenarioSelection.value) {
                         case 'speechRecognizerRecognizeOnce':
                         case 'intentRecognizerRecognizeOnce':
                         case 'pronunciationAssessmentOnce': return 'recognizeOnceAsync()';
-                        case 'speechRecognizerContinuous': 
+                        case 'speechRecognizerContinuous':
                         case 'pronunciationAssessmentContinuous': return 'startContinuousRecognitionAsync()';
                         case 'translationRecognizerContinuous': return 'startContinuousTranslation()';
                     }
@@ -467,16 +467,16 @@
                 document.getElementById('languageUnderstandingAppIdRow').style.display =
                     scenarioSelection.value === 'intentRecognizerRecognizeOnce' ? '' : 'none';
 
-                var detailedResultsSupported = 
+                var detailedResultsSupported =
                     (scenarioSelection.value === "speechRecognizerRecognizeOnce"
-                    || scenarioSelection.value === "speechRecognizerContinuous");
+                        || scenarioSelection.value === "speechRecognizerContinuous");
                 document.getElementById('formatOptionRow').style.display = detailedResultsSupported ? '' : 'none';
 
                 document.getElementById('translationOptionsRow').style.display =
                     scenarioSelection.value == 'translationRecognizerContinuous' ? '' : 'none';
-                
-                document.getElementById('pronunciationAssessmentReferenceTextRow').style.display =
-                    scenarioSelection.value.includes('pronunciation') ? '' : 'none';
+
+                //document.getElementById('pronunciationAssessmentReferenceTextRow').style.display =
+                //    scenarioSelection.value.includes('pronunciation') ? '' : 'none';
             }
 
             scenarioSelection.addEventListener("change", function () {
@@ -484,14 +484,22 @@
             });
             setScenario();
 
-            scenarioStartButton.addEventListener("click", function () {
+            scenarioStartButton.addEventListener("click", function (e) {
                 switch (scenarioSelection.value) {
                     case 'speechRecognizerRecognizeOnce':
                         doRecognizeOnceAsync();
                         break;
                     case 'speechRecognizerContinuous':
-                        timer.start();
-                        doContinuousRecognition();
+                        if (!key.value) {
+                            alert("Please enter your Cognitive Services Speech subscription key!");
+                            e.preventDefault();
+                            return false;
+                        }
+                        else
+                        {
+                            timer.start();
+                            doContinuousRecognition();
+                        }
                         break;
                     case 'intentRecognizerRecognizeOnce':
                         doRecognizeIntentOnceAsync();
@@ -508,7 +516,7 @@
                 }
             });
 
-            scenarioStopButton.addEventListener("click", function() {
+            scenarioStopButton.addEventListener("click", function () {
                 switch (scenarioSelection.value) {
                     case 'speechRecognizerRecognizeOnce':
                     case 'intentRecognizerRecognizeOnce':
@@ -552,7 +560,7 @@
                             if (!device.deviceId) {
                                 window.console.log(
                                     `Warning: unable to enumerate a microphone deviceId. This may be due to limitations`
-                                    + ` with availability in a non-HTTPS context per mediaDevices constraints.`); 
+                                    + ` with availability in a non-HTTPS context per mediaDevices constraints.`);
                             }
                             else {
                                 var opt = document.createElement('option');
@@ -573,11 +581,11 @@
                 document.getElementById('inputSourceChooseFileButton').disabled = true;
             });
 
-            inputSourceFileRadio.addEventListener("click", function() {
+            inputSourceFileRadio.addEventListener("click", function () {
                 document.getElementById('inputSourceChooseFileButton').disabled = false;
             });
 
-            document.getElementById('inputSourceChooseFileButton').addEventListener("click", function() {
+            document.getElementById('inputSourceChooseFileButton').addEventListener("click", function () {
                 document.getElementById('inputSourceFileLabel').innerHTML = 'Select audio file';
                 audioFile = undefined;
                 filePicker.click();
@@ -651,7 +659,7 @@
         }
 
         function getPronunciationAssessmentConfig() {
-            var pronunciationAssessmentConfig = new SpeechSDK.PronunciationAssessmentConfig(referenceText.value,
+            var pronunciationAssessmentConfig = new SpeechSDK.PronunciationAssessmentConfig(referenceText,
                 SpeechSDK.PronunciationAssessmentGradingSystem.HundredMark,
                 SpeechSDK.PronunciationAssessmentGranularity.Word, true);
             return pronunciationAssessmentConfig;
@@ -659,8 +667,10 @@
 
         function onRecognizing(sender, recognitionEventArgs) {
             var result = recognitionEventArgs.result;
-            statusDiv.innerHTML += `(recognizing) Reason: ${SpeechSDK.ResultReason[result.reason]}`
-                + ` Text: ${result.text}\r\n`;
+            //statusDiv.innerHTML += `(recognizing) Reason: ${SpeechSDK.ResultReason[result.reason]}`
+            //    + ` Text: ${result.text}\r\n`;
+            console.log(`(recognizing) Reason: ${SpeechSDK.ResultReason[result.reason]}`
+                + ` Text: ${result.text}\r\n`);
             // Update the hypothesis line in the phrase/result view (only have one)
             phraseDiv.innerHTML = phraseDiv.innerHTML.replace(/(.*)(^|[\r\n]+).*\[\.\.\.\][\r\n]+/, '$1$2')
                 + `${result.text} [...]\r\n`;
@@ -675,7 +685,8 @@
         function onRecognizedResult(result) {
             phraseDiv.scrollTop = phraseDiv.scrollHeight;
 
-            statusDiv.innerHTML += `(recognized)  Reason: ${SpeechSDK.ResultReason[result.reason]}`;
+            //statusDiv.innerHTML += `(recognized)  Reason: ${SpeechSDK.ResultReason[result.reason]}`;
+            console.log(`(recognized)  Reason: ${SpeechSDK.ResultReason[result.reason]}`);
             if (scenarioSelection.value === 'speechRecognizerRecognizeOnce'
                 || scenarioSelection.value === 'intentRecognizerRecognizeOnce') {
                 // Clear the final results view for single-shot scenarios
@@ -685,66 +696,83 @@
                 phraseDiv.innerHTML = phraseDiv.innerHTML.replace(/(.*)(^|[\r\n]+).*\[\.\.\.\][\r\n]+/, '$1$2');
             }
 
-            switch (result.reason) {
-                case SpeechSDK.ResultReason.NoMatch:
-                    var noMatchDetail = SpeechSDK.NoMatchDetails.fromResult(result);
-                    statusDiv.innerHTML += ` NoMatchReason: ${SpeechSDK.NoMatchReason[noMatchDetail.reason]}\r\n`;
-                    break;
-                case SpeechSDK.ResultReason.Canceled:
-                    var cancelDetails = SpeechSDK.CancellationDetails.fromResult(result);
-                    statusDiv.innerHTML += ` CancellationReason: ${SpeechSDK.CancellationReason[cancelDetails.reason]}`;
-                        + (cancelDetails.reason === SpeechSDK.CancellationReason.Error 
-                            ? `: ${cancelDetails.errorDetails}` : ``)
-                        + `\r\n`;
-                    break;
-                case SpeechSDK.ResultReason.RecognizedSpeech:
-                case SpeechSDK.ResultReason.TranslatedSpeech:
-                case SpeechSDK.ResultReason.RecognizedIntent:
-                    statusDiv.innerHTML += `\r\n`;
+            if (scenarioSelection.value === 'speechRecognizerContinuous') {
+                if(result.text !== "")
+                {
+                    recognizedText += (" " + result.text);
+                }
+                console.log(recognizedText);
+            }
+            else {
 
-                    if (useDetailedResults) {
-                        var detailedResultJson = JSON.parse(result.json);
+                switch (result.reason) {
+                    case SpeechSDK.ResultReason.NoMatch:
+                        var noMatchDetail = SpeechSDK.NoMatchDetails.fromResult(result);
+                        console.log(` NoMatchReason: ${SpeechSDK.NoMatchReason[noMatchDetail.reason]}\r\n`);
+                        //statusDiv.innerHTML += ` NoMatchReason: ${SpeechSDK.NoMatchReason[noMatchDetail.reason]}\r\n`;
+                        break;
+                    case SpeechSDK.ResultReason.Canceled:
+                        var cancelDetails = SpeechSDK.CancellationDetails.fromResult(result);
+                        console.log(` CancellationReason: ${SpeechSDK.CancellationReason[cancelDetails.reason]}`
+                            + (cancelDetails.reason === SpeechSDK.CancellationReason.Error
+                                ? `: ${cancelDetails.errorDetails}` : ``)
+                            + `\r\n`);
+                        // statusDiv.innerHTML += ` CancellationReason: ${SpeechSDK.CancellationReason[cancelDetails.reason]}`;
+                        //     + (cancelDetails.reason === SpeechSDK.CancellationReason.Error 
+                        //         ? `: ${cancelDetails.errorDetails}` : ``)
+                        //     + `\r\n`;
+                        break;
+                    case SpeechSDK.ResultReason.RecognizedSpeech:
+                    case SpeechSDK.ResultReason.TranslatedSpeech:
+                    case SpeechSDK.ResultReason.RecognizedIntent:
+                        //statusDiv.innerHTML += `\r\n`;
+                        console.log(`\r\n`);
 
-                        // Detailed result JSON includes substantial extra information:
-                        //  detailedResultJson['NBest'] is an array of recognition alternates
-                        //  detailedResultJson['NBest'][0] is the highest-confidence alternate
-                        //  ...['Confidence'] is the raw confidence score of an alternate
-                        //  ...['Lexical'] and others provide different result forms
-                        var displayText = detailedResultJson['DisplayText'];
-                        phraseDiv.innerHTML += `Detailed result for "${displayText}":\r\n`
-                        + `${JSON.stringify(detailedResultJson, null, 2)}\r\n`;
-                    } else if (result.text) {
-                        phraseDiv.innerHTML += `${result.text}\r\n`;
-                    }
+                        if (useDetailedResults) {
+                            var detailedResultJson = JSON.parse(result.json);
 
-                    var intentJson = result.properties
-                        .getProperty(SpeechSDK.PropertyId.LanguageUnderstandingServiceResponse_JsonResult);
-                    if (intentJson) {
-                        phraseDiv.innerHTML += `${intentJson}\r\n`;
-                    }
+                            // Detailed result JSON includes substantial extra information:
+                            //  detailedResultJson['NBest'] is an array of recognition alternates
+                            //  detailedResultJson['NBest'][0] is the highest-confidence alternate
+                            //  ...['Confidence'] is the raw confidence score of an alternate
+                            //  ...['Lexical'] and others provide different result forms
+                            var displayText = detailedResultJson['DisplayText'];
+                            phraseDiv.innerHTML += `Detailed result for "${displayText}":\r\n`
+                                + `${JSON.stringify(detailedResultJson, null, 2)}\r\n`;
+                        } else if (result.text) {
+                            phraseDiv.innerHTML += `${result.text}\r\n`;
+                        }
 
-                    if (result.translations) {
-                        var resultJson = JSON.parse(result.json);
-                        resultJson['privTranslationPhrase']['Translation']['Translations'].forEach(
-                            function (translation) {
-                            phraseDiv.innerHTML += ` [${translation.Language}] ${translation.Text}\r\n`;
-                        });
-                    }
+                        var intentJson = result.properties
+                            .getProperty(SpeechSDK.PropertyId.LanguageUnderstandingServiceResponse_JsonResult);
+                        if (intentJson) {
+                            phraseDiv.innerHTML += `${intentJson}\r\n`;
+                        }
 
-                    if (scenarioSelection.value.includes('pronunciation')) {
-                        var pronunciationAssessmentResult = SpeechSDK.PronunciationAssessmentResult.fromResult(result);
-                        phraseDiv.innerHTML += 
-                        `[Pronunciation result] Accuracy: ${pronunciationAssessmentResult.accuracyScore}; 
-                       Fluency: ${pronunciationAssessmentResult.fluencyScore};
-                       Completeness: ${pronunciationAssessmentResult.completenessScore}.\n`;
-                        pronunciationAssessmentResults.push(pronunciationAssessmentResult);
-                    }
-                    break;
+                        if (result.translations) {
+                            var resultJson = JSON.parse(result.json);
+                            resultJson['privTranslationPhrase']['Translation']['Translations'].forEach(
+                                function (translation) {
+                                    phraseDiv.innerHTML += ` [${translation.Language}] ${translation.Text}\r\n`;
+                                });
+                        }
+
+                        if (scenarioSelection.value.includes('pronunciation')) {
+                            var pronunciationAssessmentResult = SpeechSDK.PronunciationAssessmentResult.fromResult(result);
+                            //     phraseDiv.innerHTML += 
+                            //     `[Pronunciation result] Accuracy: ${pronunciationAssessmentResult.accuracyScore}; 
+                            //    Fluency: ${pronunciationAssessmentResult.fluencyScore};
+                            //    Completeness: ${pronunciationAssessmentResult.completenessScore}.\n`;
+                            pronunciationAssessmentResults.push(pronunciationAssessmentResult);
+                        }
+                        break;
+                }
             }
         }
 
         function onSessionStarted(sender, sessionEventArgs) {
-            statusDiv.innerHTML += `(sessionStarted) SessionId: ${sessionEventArgs.sessionId}\r\n`;
+            //statusDiv.innerHTML += `(sessionStarted) SessionId: ${sessionEventArgs.sessionId}\r\n`;
+            console.log(`(sessionStarted) SessionId: ${sessionEventArgs.sessionId}\r\n`);
 
             for (const thingToDisableDuringSession of thingsToDisableDuringSession) {
                 thingToDisableDuringSession.disabled = true;
@@ -755,7 +783,12 @@
         }
 
         function onSessionStopped(sender, sessionEventArgs) {
-            statusDiv.innerHTML += `(sessionStopped) SessionId: ${sessionEventArgs.sessionId}\r\n`;
+            //statusDiv.innerHTML += `(sessionStopped) SessionId: ${sessionEventArgs.sessionId}\r\n`;
+            console.log(`(sessionStopped) SessionId: ${sessionEventArgs.sessionId}\r\n`);
+
+            if (scenarioSelection.value == 'speechRecognizerContinuous') {
+                newCombeTestScore(sessionEventArgs.sessionId);
+            }
 
             if (scenarioSelection.value == 'pronunciationAssessmentContinuous') {
                 calculateOverallPronunciationScore();
@@ -769,14 +802,17 @@
             scenarioStopButton.disabled = true;
         }
 
-        function onCanceled (sender, cancellationEventArgs) {
+        function onCanceled(sender, cancellationEventArgs) {
             window.console.log(e);
 
-            statusDiv.innerHTML += "(cancel) Reason: " + SpeechSDK.CancellationReason[e.reason];
+            //statusDiv.innerHTML += "(cancel) Reason: " + SpeechSDK.CancellationReason[e.reason];
+            console.log("(cancel) Reason: " + SpeechSDK.CancellationReason[e.reason]);
             if (e.reason === SpeechSDK.CancellationReason.Error) {
-                statusDiv.innerHTML += ": " + e.errorDetails;
+                //statusDiv.innerHTML += ": " + e.errorDetails;
+                console.log(": " + e.errorDetails);
             }
-            statusDiv.innerHTML += "\r\n";
+            //statusDiv.innerHTML += "\r\n";
+            console.log("\r\n");
         }
 
         function applyCommonConfigurationTo(recognizer) {
@@ -818,10 +854,29 @@
             // of recognition results when applied to the recognizer.
             //
             // See https://docs.microsoft.com/azure/cognitive-services/speech-service/get-started-speech-to-text#improve-recognition-accuracy
-            if (phrases.value) {
-                var phraseListGrammar = SpeechSDK.PhraseListGrammar.fromRecognizer(recognizer);
-                phraseListGrammar.addPhrases(phrases.value.split(";"));
-            }
+            // if (phrases.value) {
+            //     var phraseListGrammar = SpeechSDK.PhraseListGrammar.fromRecognizer(recognizer);
+            //     phraseListGrammar.addPhrases(phrases.value.split(";"));
+            // }
+        }
+
+        function newCombeTestScore(sessionId) {
+            // strip punctuation
+            var referenceWords = referenceText.toLowerCase().split(' ');
+
+            var recognizedWords = [];
+            recognizedWords = recognizedText.toLowerCase().replace(/[.,\/#!?$%\^&\*;:{}=\-_`~()]/g, "").split(' ').slice(1,-1);
+
+            const intersection = [...new Set(referenceWords.filter(element => recognizedWords.includes(element)))]
+            var matches = intersection.length;
+
+            var completeness = (matches / referenceWords.length) * 100;
+
+            phraseDiv.innerHTML +=
+                `Reference words: ${referenceWords.length};
+                Recognized words: ${recognizedWords.length};
+                Matched words: ${matches};
+                Score: ${completeness}%.\n`;
         }
 
         function calculateOverallPronunciationScore() {
@@ -829,7 +884,7 @@
                 phraseDiv.innerHTML += `ERROR: difflib-browser.js is needed for pronunciation assessment calculation; see https://github.com/qiao/difflib.js`;
             }
             // strip punctuation
-            var referenceWords = referenceText.value.toLowerCase().replace(/[.,\/#!?$%\^&\*;:{}=\-_`~()]/g,"");
+            var referenceWords = referenceText.value.toLowerCase().replace(/[.,\/#!?$%\^&\*;:{}=\-_`~()]/g, "");
             referenceWords = referenceWords.split(' ');
 
             var recognizedWords = [];
