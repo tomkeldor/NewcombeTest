@@ -872,8 +872,9 @@
 
             var completeness = (matches / referenceWords.length) * 100;
 
-            phraseDiv.innerHTML +=
-                `Reference words: ${referenceWords.length};
+            phraseDiv.innerHTML =
+                `SessionId: ${sessionId};
+                Reference words: ${referenceWords.length};
                 Recognized words: ${recognizedWords.length};
                 Matched words: ${matches};
                 Score: ${completeness}%.\n`;
